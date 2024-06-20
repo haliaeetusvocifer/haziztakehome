@@ -31,5 +31,8 @@ func main() {
 	r.PUT("/players/:id", controllers.PlayersUpdate)
 	r.DELETE("/players/:id", controllers.PlayersDelete)
 
+	//Service Sync
+	r.POST("/syncservices/:teamName", controllers.FetchTeamAndPlayers)
+
 	r.Run()
 }
